@@ -13,8 +13,8 @@ import requests
 import logging
 import pandas as pd
 
-app_id = "xm_geo_decode"
-app_key = "265515e4315e52ccbfd6a85e82113e34"
+app_id = "ur own name"
+app_key = "ur own key"
 
 # Open the file containing the code and latitude/longitude of some listed companies
 addr_file = pd.read_csv("/Users/mac/Desktop/firmLngLatData.csv")
@@ -132,7 +132,7 @@ if __name__ == '__main__':
     for i in range(0, len(addr_file)):
         logging.info(f"Getting the data of firm {addr_file.loc[i, 'code']}")
         params = {
-            "key": "265515e4315e52ccbfd6a85e82113e34",
+            "key": "ur own key",
             "location": f"{addr_file.loc[i, 'Lng']},{addr_file.loc[i, 'Lat']}",
             "poitype": "160101|160102|160103|160104|160105|160106|160107|160108",
             "radius": "3000",
